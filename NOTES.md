@@ -93,10 +93,23 @@ uninstall mongod service
 
 if a unclean shutdown happened, start the server on a different port and the same data path, the server will do the data recovery work,, after the server on another port is started, recovery data will take some time depend on the data you have.after the data recovery, stop the server ,and restart the server use the original port
 
+
+> ./bin/mongod   --dbpath ./data/ --port 40000
+>
+
 why start a new port not the original one?
 
 +  to do the data recovery
 +  prevent client to connect before the date recovered
 
+## start/stop mongo on windows
+
+> net start mongodb
+> net stop mongodb
+
+> taskkill /IM mongod.exe
+> taskkill /F /IM mongod.exe
+
+# configuration file
 
 
