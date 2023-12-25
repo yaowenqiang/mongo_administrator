@@ -79,9 +79,24 @@ uninstall mongod service
 > net stop mongodb
 > mongod --remove
 
+## start and stop mongod
+
+> sudo service mongod start
+> sudo service mongod stop
+
+> use admin;
+> db.shutdownServer()
 
 
+> kill  pidOfMongod
+> do not use kill  -9 
 
+if a unclean shutdown happened, start the server on a different port and the same data path, the server will do the data recovery work,, after the server on another port is started, recovery data will take some time depend on the data you have.after the data recovery, stop the server ,and restart the server use the original port
+
+why start a new port not the original one?
+
++  to do the data recovery
++  prevent client to connect before the date recovered
 
 
 
