@@ -112,4 +112,8 @@ why start a new port not the original one?
 
 # configuration file
 
+## Journaling
 
+### journal Flush Interval
+
+db.serverStatus().dur
