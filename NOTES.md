@@ -117,3 +117,9 @@ why start a new port not the original one?
 ### journal Flush Interval
 
 db.serverStatus().dur
+
+> dir /s /b data1
+
+> netsh interface ip show address
+
+### webpage 
