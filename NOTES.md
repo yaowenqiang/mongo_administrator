@@ -123,3 +123,17 @@ db.serverStatus().dur
 > netsh interface ip show address
 
 ### webpage 
+
+## Upgrading
+
+Version number
+
+3.0.1
+
+Major.Minor(Odd}Even).Revision
+
+> Even for each stable release
+
+> Never go Odd in Prod
+
+
