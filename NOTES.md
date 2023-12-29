@@ -136,4 +136,22 @@ Major.Minor(Odd}Even).Revision
 
 > Never go Odd in Prod
 
+# Query crash course
+
+> db.collectionName.stats()
+
+## ObjectId(12 Bytes)
+
+ObjectId('65830aa5629da9bcfed8b116')
+
+ 4 bytes of Unix Eponch 
+ 3 bytes of  MachineId 
+ 2 bytes of  Processid 
+ 3 bytes of  Counter
+
+
+ObjectId('65830aa5629da9bcfed8b116').getTimestamp()
+
+Ascending Id 
+
 
