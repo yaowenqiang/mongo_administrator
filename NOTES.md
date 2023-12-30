@@ -154,4 +154,13 @@ ObjectId('65830aa5629da9bcfed8b116').getTimestamp()
 
 Ascending Id 
 
+## Cursor
+> x = db.collectionName.find()
+>x.next()
+
+# Data in ,Data Out
+
+> mongodump
+
+
 
