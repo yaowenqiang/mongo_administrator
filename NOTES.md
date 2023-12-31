@@ -162,5 +162,18 @@ Ascending Id
 
 > mongodump
 
+> mongodump --host hostname  --port port --out outdir
+
+> mongodump --oplog only apply when running a replica set
+
+> mongodump --db dbname
+
+> mongodump --db dbname --collection collectionname
+
+> admin and local db 
+
+
+
+
 
 
