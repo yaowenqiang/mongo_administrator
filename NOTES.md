@@ -172,6 +172,22 @@ Ascending Id
 
 > admin and local db 
 
+> mongodump --username username --password password --db dbname --collection collectionname
+
+use bsondump to read mongodump files
+
+## mongorestore
+
+
+> mongorestore backup\dump
+
+> mongorestore --host hostname --port 27017 backup\dump
+
+> mongorestore --host hostname --port 27017 backup\dump --drop
+> mongorestore --host hostname --port 27017 backup\dump --db dbname --collection collectionName   backup/dump/dbname/collectionname
+> mongorestore --host hostname --port 27017 backup\dump --oplogReplay
+
+
 
 
 
