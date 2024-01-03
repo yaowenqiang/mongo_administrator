@@ -187,6 +187,18 @@ use bsondump to read mongodump files
 > mongorestore --host hostname --port 27017 backup\dump --db dbname --collection collectionName   backup/dump/dbname/collectionname
 > mongorestore --host hostname --port 27017 backup\dump --oplogReplay
 
+## mongoimport & mongoexport
+
+> mongoimport --type [json|csv|tsv]
+
+> mongoimport --db dbname --collection collectionName file.json
+> mongoimport --db dbname --collection collectionName file.json --upsert
+> mongoimport --db dbname --collection collectionName  --upsert  --upsertFields fieldName file.json
+
+> mongoimport --type csv --headerline --db dbname --collection collectionName  --upsert  --upsertFields fieldName file.csv
+
+> mongoimport --type csv --fields field1,field2...fieldn --db dbname --collection collectionName  file.csv
+
 
 
 
