@@ -198,6 +198,22 @@ use bsondump to read mongodump files
 > mongoimport --type csv --headerline --db dbname --collection collectionName  --upsert  --upsertFields fieldName file.csv
 
 > mongoimport --type csv --fields field1,field2...fieldn --db dbname --collection collectionName  file.csv
+> mongoimport --type csv --fieldFile  filedfile(one column per-line) --db dbname --collection collectionName  file.csv
+
+> mongoexport  --db dbname --collection collectionName 
+
+> mongoexport  --db dbname --collection collectionName  > out.json
+> mongoexport  --db dbname --collection collectionName  --out out.json
+
+> mongoexport  --db dbname --collection collectionName  --out out.json --fields field1,field2 (with id )
+> mongoexport  --db dbname --collection collectionName  --out out.csv --fields field1,field2 --type=csv (without id)
+> mongoexport  --db dbname --collection collectionName  --out out.csv --fields field1,field2.field3 --type=csv
+> mongoexport  --db dbname --collection collectionName  --out out.csv --fields field1,field2.field3 --type=csv --query '{_id:{$gt:2}}'
+
+> mongoexport  --skip 0 --limit 2 --sort '{_id:1}' --db dbname --collection collectionName 
+> mongoexport  --skip 2 --limit 2 --sort '{_id:1}' --db dbname --collection collectionName 
+>
+>
 
 
 
