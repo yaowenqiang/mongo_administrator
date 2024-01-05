@@ -215,6 +215,26 @@ use bsondump to read mongodump files
 >
 >
 
+# Indexes
+
+> BTree
+> db.system.indexes.find()
+
+## create index
+
+> db.collectionName.ensureIndex({field: direction})
+> db.collectionName.dropIndex(indexName)
+
+> db.collectionName.ensureIndex({'fields.subfield1': direction})
+
+> db.collectionName.find().explan()
+
+> db.collectionName.find().explan('executionStats')
+
+
+
+
+
 
 
 
