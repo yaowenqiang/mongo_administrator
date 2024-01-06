@@ -230,6 +230,16 @@ use bsondump to read mongodump files
 > db.collectionName.find().explan()
 
 > db.collectionName.find().explan('executionStats')
+> db.collectionName.find().explan(true)
+
+> yielding number
+
+###  covered index
+> totalDocsExamined : 0 in the query explain
+
+
+
+
 
 
 
