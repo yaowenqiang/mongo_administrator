@@ -238,6 +238,35 @@ use bsondump to read mongodump files
 > totalDocsExamined : 0 in the query explain
 
 
+## sparse index
+
+> db.collectionName.ensureIndex({'fields.subfield1': direction}, {sparse: true})
+> db.system.indexes.find({name: 'prom_1'})  # sparse : true
+
+
+sort fields should not be a sparse index
+
+
+force to use index
+
+> db.collectionName.find({}).sort({fields:1}).hint({field:1})
+
+## unique index
+
+> db.collectionName.ensureIndex({'fields': direction}, {unique: true})
+
+## Sparse + Unique
+
+> db.collectionName.ensureIndex({'fields': direction}, {unique: true, sparse: true})
+
+unique index still works for array
+unique index doesn't work on shards
+
+
+
+
+
+
 
 
 
