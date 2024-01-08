@@ -263,6 +263,65 @@ unique index still works for array
 unique index doesn't work on shards
 
 
+## TTL index
+
+> db.collectionName.ensureIndex({'fields': direction}, expireAfterSeconds: 60 * 60 * 24 * 90})
+
++ Removes documents after they expire
++ Define on date-time field
++ One TTL index per collection
+
+
+### Build index on the background
+
+> db.collectionName.ensureIndex({'fields': direction}, expireAfterSeconds: 60 * 60 * 24 * 90, background: true})
+
+## reindex
+
+> db.collectionName.reIndex()
+
+## compact
+
+Rebuilds collection
+
++ Defragments documents
++ Rebuilds all indexes
++ block operation
+
+> db.runCommand({compace: 'mycollection'})
+
+
+index key selectivity
+
+
+index limitation
+
+
+KeyValue Size Limit
+
++ 1024 bytes
++ combined value data size of all fields in index
+
+KeyName Size limit
+
++ 128 bytes
+
+max Keys per index
+
++ 31
+
+
+
+Indexes Per Collection
+
++ 64
++(am i over-indexing)
+
+
+
+
+
+
 
 
 
