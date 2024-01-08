@@ -319,6 +319,18 @@ Indexes Per Collection
 
 
 
+#  ReplicaSet
+
+## Capped Collection 
+
+> start mongod --dbpath dirname --replSet r1 --oplogSize 1
+> mongo 
+
+> rs.initiate() # start a replicaSet
+> rs.config()
+
+
+
 
 
 
