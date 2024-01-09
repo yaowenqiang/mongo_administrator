@@ -328,6 +328,29 @@ Indexes Per Collection
 
 > rs.initiate() # start a replicaSet
 > rs.config()
+> var conf = rs.config()
+> rs.reconfig(conf)
+
+
+> rs.status()
+
+## Elections
+
+## add more members to the replicaset
+
+> start mongod --port 30001 --dbpath ./fresh/r1 --replset r1
+> start mongod --port 30002 --dbpath ./fresh/r2 --replset r1
+> start mongod --port 30003 --dbpath ./fresh/r3 --replset r1
+
+> rs.add('myserver:30002')
+> rs.add('myserver:30003', true) # arbiter
+> for(i=0;i < 10;i++) { db.demo.save({_id:i}) }
+
+> db = connect('myserver:30002/test') # connect to other server
+> db.setSlaveOk()
+> db.demo.find()
+
+
 
 
 
