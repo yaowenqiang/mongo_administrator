@@ -350,6 +350,16 @@ Indexes Per Collection
 > db.setSlaveOk()
 > db.demo.find()
 
+## set replica member priority
+
+> var cfg = rs.config()
+> cfg.members[0].priority = 10
+> rs.reconfig(cfg) 
+> rs.reconfig(cfg, {force: true}) 
+
+> db.getMongo()
+
+
 
 
 
