@@ -338,9 +338,9 @@ Indexes Per Collection
 
 ## add more members to the replicaset
 
-> start mongod --port 30001 --dbpath ./fresh/r1 --replset r1
-> start mongod --port 30002 --dbpath ./fresh/r2 --replset r1
-> start mongod --port 30003 --dbpath ./fresh/r3 --replset r1
+> start mongod --port 30001 --dbpath ./fresh/r1 --replSet r1
+> start mongod --port 30002 --dbpath ./fresh/r2 --replSet r1
+> start mongod --port 30003 --dbpath ./fresh/r3 --replSet r1
 
 > rs.add('myserver:30002')
 > rs.add('myserver:30003', true) # arbiter
@@ -358,6 +358,22 @@ Indexes Per Collection
 > rs.reconfig(cfg, {force: true}) 
 
 > db.getMongo()
+
+
+### stepDown
+
+
+> rs.stepDown(3 * 60)
+
+## freeze
+
+> rs.freeze(5 * 60)
+
+## hidden
+
+> cfg.members[0].priority = 0 # 0 means will never become a primary
+> cfg.members[0].hidden = true
+
 
 
 
