@@ -375,6 +375,25 @@ Indexes Per Collection
 > cfg.members[0].hidden = true
 
 
+## Chaining
+
+> rs.settings.chainingAllowed
+
+
+Allow chaining lets you save on network traffic and potentially latency
+disallow chaining forces all secondaries to directly pull from the primary
+
+## Durability
+
+Flush to Disk
+
+Tow is One
+and One is None
+
+
+
+
+
 
 
 
