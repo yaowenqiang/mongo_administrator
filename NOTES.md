@@ -391,6 +391,16 @@ Tow is One
 and One is None
 
 
+## Wriote concern
+
++ "Acknowlgeged" write concern
++ "unacknowlgeged" write concern (fastest)
++ "journaled" write concern(default)
+
+
+
+
+
 
 
 
