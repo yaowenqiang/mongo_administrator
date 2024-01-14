@@ -396,6 +396,19 @@ and One is None
 + "Acknowlgeged" write concern
 + "unacknowlgeged" write concern (fastest)
 + "journaled" write concern(default)
++ majority write concern("majority of voting members")
+
+
+> db.demo.insert({'x':'hh'}.{writeConcern: {w:0}})
+> db.demo.insert({'x':'hh'}.{writeConcern: {j:True}}) # journaled true
+> db.demo.insert({'x':'hh'}.{writeConcern: {w:1}})
+> db.demo.insert({'x':'hh'}.{writeConcern: {w:2}})
+> db.demo.insert({'x':'hh'}.{writeConcern: {w:2, j:true}})
+> db.demo.insert({'x':'hh'}.{writeConcern: {w:'majority'}})
+
+
+
+
 
 
 
