@@ -407,6 +407,12 @@ and One is None
 > db.demo.insert({'x':'hh'}.{writeConcern: {w:'majority'}})
 
 
+# Sharding
+
+
+> mongod --configsvr --dbpath=fresh/config 
+
+> mongos  --configdb myserver
 
 
 
