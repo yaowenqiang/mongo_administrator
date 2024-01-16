@@ -414,6 +414,20 @@ and One is None
 
 > mongos  --configdb myserver
 
+> mongod --port 3001 --dbpath r1
+> mongod --port 30012--dbpath r2
+> 
+> sh.addShard('myserver:3001')
+> sh.addShard('myserver:3002')
+> sh.status()
+> sh.enableSharding('dbname')
+> sh.shardCollection('dbname.collectionName',{'shardingKey1':1, 'shardingKey2':2}) # index will be created
+
+
+
+
+
+
 
 
 
