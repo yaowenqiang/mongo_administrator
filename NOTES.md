@@ -423,42 +423,50 @@ and One is None
 > sh.enableSharding('dbname')
 > sh.shardCollection('dbname.collectionName',{'shardingKey1':1, 'shardingKey2':2}) # index will be created
 
+# monitoring
+
+## log file
+
+> findstr  options logfile
 
 
+## log level
+
++ 1 very quiet 
++ 2
++ 3
++ 4
++ 5 most verbose
+
+> show logs
+> show log global
+
+mongod log file line
+
+<timestamp><servity><component>[<content>]<message>
+
+> db.setLoglevel(0, 'query') 0 means verbosity, 'query' is the topic
+
+topic is optional
+
+topic list
+
++ 'accessControl'
++ 'command'
++ 'control'
++ 'geo'
++ 'index'
++ 'network'
++ 'query'
++ 'replication'
++ 'storage'
++ 'journal'
++ 'write'
+
+> db.setLogLevel(4, 'query')
+> db.getLogComponents()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## MMS
 
 
