@@ -467,6 +467,35 @@ topic list
 > db.getLogComponents()
 
 
+> db.setLogLevel(-1, 'query')
+
+## set log level in config file
+
+
+systemLog:
+    destination: file
+    path: "log_path"
+    component:
+        command:
+            verbosity: 2
+
+## query profile
+> show profile
+
+profile level 
+
++ 0 no profile
++ 1 only slow query 
++ 2 all query
+
+db.setProfilingLevel(2, 20)
+show profile
+
+
+
+
+
+
 ## MMS
 
 
