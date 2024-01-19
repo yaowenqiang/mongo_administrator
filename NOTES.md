@@ -491,6 +491,15 @@ profile level
 db.setProfilingLevel(2, 20)
 show profile
 
+> db.stats(1000000)
+> db.serverStatus()
+> db.runCommand({serverStatus:1})
+> db.serverStatus().dur
+> db.serverStatus().mem
+> db.serverStatus().network
+> db.serverStatus().metrics.cursor
+
+
 
 
 
