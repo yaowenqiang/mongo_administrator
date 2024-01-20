@@ -507,4 +507,12 @@ show profile
 
 ## MMS
 
+# Security
 
++ Basic Authentication
++ robust Authorization
++ SSL
++ Server-Server Authentication
++ LDAP / Kerberos  (comerical)
++ Encryption At Rest
++
