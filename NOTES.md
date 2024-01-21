@@ -515,4 +515,64 @@ show profile
 + Server-Server Authentication
 + LDAP / Kerberos  (comerical)
 + Encryption At Rest
+
+
+## Roles
+
+### Root
+
++ Very powerful
++ Use with caution
++ Give(almost) nobody
+
+
+### userAdminAnyDatabase
+
++ Very powerful
++ Use with caution
++ Create users
++ Grants permissions
++ Can 'upgrade' self
 +
+
+### read
+
++ Read collection
++ Database specific
+
+
+### readWrite
+
++ Anything 'read'can do
++ + Write ono-system collections
++ Database specific
+
+### Key File
+
++ Arbitrary content
++ 6 - 1024 characters
++ Base64 characters only
++ User-only file read permissions
++
+
+### Network Ports
+
+process | Role  | Default Port 
+-      |   ---- |  ----- |
+Mongod | Stand-alone | 27017 |
+Mongod | --shardsvr | 27018 |
+Mongod | --configsvr | 27019 |
+Mongos | N/a | 27017 |
+Mongod | Status page(off) | +1000 |
+
+
+### ssl
+
+mode: [requireSSL |  allowSSL | preferSSL | disabled]
+
+> mongo --ssl -sslCaFile cacert.pem --host host1.demo --sslPemKeyFile client.pem --sslPemKeyPassword thepassword
+
+> db.serverStatus().security
+
+
+
