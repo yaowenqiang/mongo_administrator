@@ -575,4 +575,75 @@ mode: [requireSSL |  allowSSL | preferSSL | disabled]
 > db.serverStatus().security
 
 
+bitlocker
+Linux Unified Key Setup(LUKS)
+
+https://mongodb.com/partners
+
+## Authentication & Authorization
+
+> use admin
+
+usr = {
+    'user': 'superUserAdmin',
+    'pwd': '1234',
+    'roles': [
+    {
+    'role': 'userAdminAnyDatabase',
+    'db':'admin'
+    }
+
+    ]
+}
+
+db.createuser(usr)
+
+
+
+reporter = {
+    'user': 'reporter',
+    'pwd': '1234',
+    'roles': [
+    {
+    'role': 'read',
+    'db':'demo'
+    }
+
+    ]
+}
+
+db.createuser(reporter)
+
+
+
+webapp = {
+    'user': 'reporter',
+    'pwd': '1234',
+    'roles': [
+    {
+    'role': 'readwrite',
+    'db':'demo'
+    }
+
+    ]
+}
+
+db.createuser(webapp)
+db.grantRolesToUser('superUserAdmin', ['readwrite'])
+
+
+> show users
+> db.system.users.findOne()
+
+> db.dropUser('bob')
+
+> db.revokeRolesFromUser('bob', '['read']')
+> db.grantRolesToUser('bob', [{db;'dbname', role: 'read'}])
+
+> mongo  --username bob --password 1234 --authenticationDatabase telco
+
+
+## cluster authentication
+
+
 
