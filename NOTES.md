@@ -646,4 +646,33 @@ db.grantRolesToUser('superUserAdmin', ['readwrite'])
 ## cluster authentication
 
 
+# Miscellaneous
+
+## Storage Engines
+
+mmapv1
+
++ Speed
++ Simplicity
++
+
+WiredTiger
+
++ Speed
++ Compression
++ Lock Granularity
++ Document level locking
+
+> mongod --storageEngine wiredTiger
+
+> mongod --storageEngine mmapv1  --port 30001 --dbpath fresh/41
+> mongod --storageEngine mmapv1  --port 30002 --dbpath fresh/42 --wiredTigerCollectionBlockCompressor none --wiredTigerJournalCompressor none --wiredTigerIndexPrefixCompression 0 
+
+
+third Party
+
++ Compression
++ Encryption
++ Speed
++ Other
 
