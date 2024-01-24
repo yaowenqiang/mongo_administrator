@@ -666,7 +666,7 @@ WiredTiger
 > mongod --storageEngine wiredTiger
 
 > mongod --storageEngine mmapv1  --port 30001 --dbpath fresh/41
-> mongod --storageEngine mmapv1  --port 30002 --dbpath fresh/42 --wiredTigerCollectionBlockCompressor none --wiredTigerJournalCompressor none --wiredTigerIndexPrefixCompression 0 
+> mongod --storageEngine wiredTiger  --port 30002 --dbpath fresh/42 --wiredTigerCollectionBlockCompressor none --wiredTigerJournalCompressor none --wiredTigerIndexPrefixCompression 0 
 
 
 third Party
@@ -676,3 +676,6 @@ third Party
 + Speed
 + Other
 
+## Directory for indexes
+
+> mongod --storageEngine wiredTiger  --port 30002 --dbpath fresh/42 --wiredTigerDirectoryForIndexes
